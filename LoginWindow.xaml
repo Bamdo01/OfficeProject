@@ -14,9 +14,31 @@
             <RowDefinition Height="1*"></RowDefinition>
         </Grid.RowDefinitions>
 
-        <TextBlock Grid.Row="0" FontSize="30" VerticalAlignment="Center" HorizontalAlignment="Center" FontWeight="Bold" Foreground="">
+        <TextBlock Grid.Row="0" FontSize="30" VerticalAlignment="Center" HorizontalAlignment="Center" FontWeight="Bold">
             NUOFFICE LOGIN
         </TextBlock>
-        
+
+        <Border Grid.Row="1" Margin="10" CornerRadius="5" BorderThickness="1" BorderBrush="{DynamicResource ABrush.Tone2.Border.Static}">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="1*"></RowDefinition>
+                    <RowDefinition Height="1*"></RowDefinition>
+                    <RowDefinition Height="1*"></RowDefinition>
+                    <RowDefinition Height="1*"></RowDefinition>
+                    <RowDefinition Height="1*"></RowDefinition>
+                </Grid.RowDefinitions>
+
+                <TextBlock Grid.Row="0" Margin="16 0 0 0" VerticalAlignment="Center" FontSize="16">아이디</TextBlock>
+                <TextBox Grid.Row="1" Margin="16 0" BorderThickness="1" BorderBrush="{DynamicResource ABrush.Tone2.Border.Static}"></TextBox>
+                <TextBlock Grid.Row="2" Margin="16 0 0 0" VerticalAlignment="Center" FontSize="16">비밀번호</TextBlock>
+                <TextBox Grid.Row="3" Margin="16 0" BorderThickness="1" BorderBrush="{DynamicResource ABrush.Tone2.Border.Static}"></TextBox>
+                <Button Grid.Row="4" Margin="120 7" Content="LOGIN"></Button>
+            </Grid>
+        </Border>
+
+        <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center">
+            <Hyperlink Click="Hyperlink_Click">Click Me</Hyperlink>
+        </TextBlock>
+
     </Grid>
 </Window>
