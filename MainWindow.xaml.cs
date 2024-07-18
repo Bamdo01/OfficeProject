@@ -11,7 +11,7 @@ namespace NUPROJECT_vcs
         }
         private void OnFriendListItemClick(object sender, RoutedEventArgs e)
         {
-            MainFrame.Content = new FirstPage();
+            MainFrame.Content = new MainPage();
         }
 
     }

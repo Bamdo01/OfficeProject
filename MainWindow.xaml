@@ -29,6 +29,7 @@
             <Button Grid.Row="6" Margin="6" Content="일정" Click="OnFriendListItemClick"></Button>
         </Grid>
 
-        <Frame Grid.Column ="1" x:Name="MainFrame" NavigationUIVisibility="Hidden"></Frame>
+        <Frame Grid.Column ="1" x:Name="MainFrame" NavigationUIVisibility="Hidden">
+        </Frame>
     </Grid>
 </Window>
