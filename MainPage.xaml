@@ -15,20 +15,20 @@
             <RowDefinition Height="1*"></RowDefinition>
         </Grid.RowDefinitions>
 
-        <Grid Grid.Row="0"> 
+        <Grid Grid.Row="0">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="2*"></ColumnDefinition>
                 <ColumnDefinition Width="1*"></ColumnDefinition>
             </Grid.ColumnDefinitions>
-
-            <Border Grid.Column="0"  CornerRadius="10" Margin="10" Background="{DynamicResource  ABrush.Tone3.Border.Static}" BorderThickness="0.5" BorderBrush="White">
+            <!--왼쪽 상단 중요일정-->
+            <Border Grid.Column="0"  CornerRadius="10" Margin="10" BorderThickness="0.5" BorderBrush="White">
                 <Grid>
                     <Grid.RowDefinitions>
                         <RowDefinition Height="32"></RowDefinition>
                         <RowDefinition Height="1*"></RowDefinition>
                     </Grid.RowDefinitions>
                     <Border Grid.Row="0" CornerRadius="10 10 0 0" Background="{DynamicResource ABrush.Tone2.Border.Static}">
-                        <TextBlock>중요 일정</TextBlock>
+                        <TextBlock Margin="5">중요 일정</TextBlock>
                     </Border>
                     <ListBox Grid.Row="1" BorderThickness="0" Background="Transparent">
                         <ListBoxItem Content="첫 번째 항목"/>
@@ -37,19 +37,51 @@
                     </ListBox>
                 </Grid>
             </Border>
-            
-           
-            
-            
+
+            <!--오른쪽 상단 로그인 상태표, 경조사표-->
             <Grid Grid.Column="1">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="1*"></RowDefinition>
                     <RowDefinition Height="2*"></RowDefinition>
                 </Grid.RowDefinitions>
-                
-                
+
+                <Border Grid.Row="0" Margin="10" CornerRadius="10" BorderThickness="0.5" BorderBrush="White">
+                    <TextBlock Margin="5">OOO 님 환영합니다</TextBlock>
+                </Border>
+
+                <Border Grid.Row="1"  CornerRadius="10" Margin="10" BorderThickness="0.5" BorderBrush="White">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="32"></RowDefinition>
+                            <RowDefinition Height="1*"></RowDefinition>
+                        </Grid.RowDefinitions>
+                        <Border Grid.Row="0" CornerRadius="10 10 0 0" Background="{DynamicResource ABrush.Tone2.Border.Static}">
+                            <TextBlock Margin="5">경조사</TextBlock>
+                        </Border>
+                        <ListBox Grid.Row="1" BorderThickness="0" Background="Transparent">
+                            <ListBoxItem Content="첫 번째 항목"/>
+                            <ListBoxItem Content="두 번째 항목"/>
+                            <ListBoxItem Content="세 번째 항목"/>
+                        </ListBox>
+                    </Grid>
+                </Border>
             </Grid>
-                     
         </Grid>
+        <!--최근메모 UI-->
+        <Border Grid.Row="1"  CornerRadius="10" Margin="10" BorderThickness="0.5" BorderBrush="White">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="32"></RowDefinition>
+                    <RowDefinition Height="1*"></RowDefinition>
+                </Grid.RowDefinitions>
+                <Border Grid.Row="0" CornerRadius="10 10 0 0" Background="{DynamicResource ABrush.Tone2.Border.Static}">
+                    <TextBlock Margin="5">최근 메모</TextBlock>
+                </Border>
+
+                <TextBlock Grid.Row="1" Margin="5">
+                    최근메모한거
+                </TextBlock>
+            </Grid>
+        </Border>
     </Grid>
 </Page>
