@@ -5,12 +5,12 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:NUPROJECT_vcs"
         mc:Ignorable="d"
-        Title="LoginWindow" Height="400" Width="350"
+        Title="LoginWindow" Height="450" Width="350"
         Style="{DynamicResource CustomWindowStyle}">
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="1.25*"></RowDefinition>
-            <RowDefinition Height="2.5*"></RowDefinition>
+            <RowDefinition Height="1.5*"></RowDefinition>
+            <RowDefinition Height="4*"></RowDefinition>
             <RowDefinition Height="1*"></RowDefinition>
         </Grid.RowDefinitions>
 
@@ -29,15 +29,17 @@
                 </Grid.RowDefinitions>
 
                 <TextBlock Grid.Row="0" Margin="16 0 0 0" VerticalAlignment="Center" FontSize="16">아이디</TextBlock>
-                <TextBox Grid.Row="1" Margin="16 0" BorderThickness="1" BorderBrush="{DynamicResource ABrush.Tone2.Border.Static}"></TextBox>
+                <TextBox Grid.Row="1" Margin="16 0 16 10" BorderThickness="1" BorderBrush="{DynamicResource ABrush.Tone2.Border.Static}"></TextBox>
                 <TextBlock Grid.Row="2" Margin="16 0 0 0" VerticalAlignment="Center" FontSize="16">비밀번호</TextBlock>
-                <TextBox Grid.Row="3" Margin="16 0" BorderThickness="1" BorderBrush="{DynamicResource ABrush.Tone2.Border.Static}"></TextBox>
+                <TextBox Grid.Row="3" Margin="16 0 16 10" BorderThickness="1" BorderBrush="{DynamicResource ABrush.Tone2.Border.Static}"></TextBox>
                 <Button Grid.Row="4" Margin="120 7" Content="LOGIN"></Button>
             </Grid>
         </Border>
 
-        <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center">
-            <Hyperlink Click="Hyperlink_Click">Click Me</Hyperlink>
+        <TextBlock Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <Hyperlink Click="Register_Click">회원가입</Hyperlink>
+            <Hyperlink Click="IdFind_Click">아이디 찾기</Hyperlink>
+            <Hyperlink Click="PwFind_Click">비밀번호 찾기</Hyperlink>
         </TextBlock>
 
     </Grid>

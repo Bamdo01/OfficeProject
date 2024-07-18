@@ -23,5 +23,18 @@ namespace NUPROJECT_vcs
         {
             InitializeComponent();
         }
+
+        private void Register_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("RG clicked!");
+        }
+        private void IdFind_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("ID clicked!");
+        }
+        private void PwFind_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("PW clicked!");
+        }
     }
 }
