@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using System.Net.Sockets;
 
 namespace NUPROJECT_vcs
 {
@@ -23,18 +24,6 @@ namespace NUPROJECT_vcs
         {
             InitializeComponent();
         }
-
-        private void Register_Click(object sender, RoutedEventArgs e)
-        {
-            MessageBox.Show("RG clicked!");
-        }
-        private void IdFind_Click(object sender, RoutedEventArgs e)
-        {
-            MessageBox.Show("ID clicked!");
-        }
-        private void PwFind_Click(object sender, RoutedEventArgs e)
-        {
-            MessageBox.Show("PW clicked!");
-        }
+ 
     }
 }
