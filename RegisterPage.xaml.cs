@@ -32,8 +32,24 @@ namespace NUPROJECT_vcs
 
         private void ConfirnClick(object sender, RoutedEventArgs e)
         {
-           
+            NUPServerConnector connector = new NUPServerConnector();
+            connector.SendUserRegister(txtId.Text, txtPw.Text, txtEmail.Text, txtAddr.Text,dpBirth.DisplayDate,1, txtPhone.Text, RegisterOk, RegisterNg);
         }
+        private void RegisterOk(string res)
+        {
+            MessageBox.Show("회원가입 성공");
+            MainWindow mainWindow = new MainWindow();
+            mainWindow.Show();
+
+            Window parent = Window.GetWindow(this);
+            parent.Close();
+        }
+
+        private void RegisterNg(string res)
+        {
+            MessageBox.Show("회원가입 실패 하였습니다.");
+        }
+
         private void CancelClick(object sender, RoutedEventArgs e)
         {
             Window parent = Window.GetWindow(this);

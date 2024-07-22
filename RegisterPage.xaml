@@ -50,13 +50,13 @@
                             <RowDefinition Height="1*"></RowDefinition>
                             <RowDefinition Height="1*"></RowDefinition>
                         </Grid.RowDefinitions>
-                        <TextBox Grid.Row="0" Margin="5" ></TextBox>
-                        <TextBox Grid.Row="1" Margin="5"></TextBox>
-                        <TextBox Grid.Row="2" Margin="5"></TextBox>
-                        <TextBox Grid.Row="3" Margin="5"></TextBox>
-                        <TextBox Grid.Row="4" Margin="5"></TextBox>
-                        <TextBox Grid.Row="5" Margin="5"></TextBox>
-                        <TextBox Grid.Row="6" Margin="5"></TextBox>
+                        <TextBox Grid.Row="0" x:Name="txtId" Margin="5" ></TextBox>
+                        <TextBox Grid.Row="1" x:Name="txtPw" Margin="5"></TextBox>
+                        <TextBox Grid.Row="2" x:Name="txtEmail" Margin="5"></TextBox>
+                        <TextBox Grid.Row="3" x:Name="txtAddr" Margin="5"></TextBox>
+                        <DatePicker Grid.Row="4" x:Name="dpBirth" Margin="5"></DatePicker>
+                        <TextBox Grid.Row="5" x:Name="txtGender" Margin="5"></TextBox>
+                        <TextBox Grid.Row="6" x:Name="txtPhone" Margin="5"></TextBox>
                     </Grid>
                 </Grid>
             </Border>
