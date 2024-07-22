@@ -20,8 +20,8 @@
                 <RowDefinition Height="64"></RowDefinition>
                 <RowDefinition Height="64"></RowDefinition>
             </Grid.RowDefinitions>
-            <Button Grid.Row="0" Margin="6" Content="메인" Click="OnFriendListItemClick"></Button>
-            <Button Grid.Row="1" Margin="6" Content="지인&#x0a;목록" Click="OnFriendListItemClick"></Button>
+            <Button Grid.Row="0" Margin="6" Content="메인" Click="MainClick"></Button>
+            <Button Grid.Row="1" Margin="6" Content="친구&#x0a;목록" Click="OnFriendListItemClick"></Button>
             <Button Grid.Row="2" Margin="6" Content="채팅" Click="OnFriendListItemClick"></Button>
             <Button Grid.Row="3" Margin="6" Content="자료실" Click="OnFriendListItemClick"></Button>
             <Button Grid.Row="4" Margin="6" Content="메모장" Click="OnFriendListItemClick"></Button>

@@ -57,6 +57,34 @@ namespace NUPROJECT_vcs
             this.SendMessage(query.ToString(), OnReceiveOK, OnReceiveNG);
         }
 
+        public void SendUserAddFriend(string id, string friendid, Action<string> OnReceiveOK, Action<string> OnReceiveNG)
+        {
+            StringBuilder query = new StringBuilder();
+            query.Append($"COMMAND:USER_ADDFRIEND{Environment.NewLine}");
+            query.Append($"USERID:{id}{Environment.NewLine}");
+            query.Append($"FRIENDID:{friendid}{Environment.NewLine}");
+
+            this.SendMessage(query.ToString(), OnReceiveOK, OnReceiveNG);
+        }
+
+        public void SendUserGetPendingFriends(string id, Action<string> OnReceiveOK, Action<string> OnReceiveNG)
+        {
+            StringBuilder query = new StringBuilder();
+            query.Append($"COMMAND:USER_LISTPENDINGFRIEND{Environment.NewLine}");
+            query.Append($"USERID:{id}{Environment.NewLine}");
+
+            this.SendMessage(query.ToString(), OnReceiveOK, OnReceiveNG);
+        }
+
+        public void SendUserGetFriends(string id, Action<string> OnReceiveOK, Action<string> OnReceiveNG)
+        {
+            StringBuilder query = new StringBuilder();
+            query.Append($"COMMAND:USER_LISTFRIEND{Environment.NewLine}");
+            query.Append($"USERID:{id}{Environment.NewLine}");
+
+            this.SendMessage(query.ToString(), OnReceiveOK, OnReceiveNG);
+        }
+
         public void SendUserResetPassword(string id, string newPw, Action<string> OnReceiveOK, Action<string> OnReceiveNG)
         {
             byte[] computeHash = SHA256.Create().ComputeHash(Encoding.UTF8.GetBytes(newPw));
@@ -147,6 +175,7 @@ namespace NUPROJECT_vcs
                     {
                         if (response.Contains("RESULT:OK"))
                         {
+
                             state.OnReceiveOK(response);
                         }
                         else if (response.Contains("RESULT:NG"))
