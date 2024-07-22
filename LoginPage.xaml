@@ -25,9 +25,9 @@
                     </Grid.RowDefinitions>
 
                     <TextBlock Grid.Row="0" Margin="16 0 0 0" VerticalAlignment="Center" FontSize="16">아이디</TextBlock>
-                    <TextBox Grid.Row="1" Margin="16 0 16 10" BorderThickness="1" BorderBrush="{DynamicResource ABrush.Tone2.Border.Static}"></TextBox>
+                    <TextBox Grid.Row="1" x:Name="txtId" Margin="16 0 16 10" BorderThickness="1" BorderBrush="{DynamicResource ABrush.Tone2.Border.Static}"></TextBox>
                     <TextBlock Grid.Row="2" Margin="16 0 0 0" VerticalAlignment="Center" FontSize="16">비밀번호</TextBlock>
-                    <TextBox Grid.Row="3" Margin="16 0 16 10" BorderThickness="1" BorderBrush="{DynamicResource ABrush.Tone2.Border.Static}"></TextBox>
+                    <TextBox Grid.Row="3" x:Name="txtPw" Margin="16 0 16 10" BorderThickness="1" BorderBrush="{DynamicResource ABrush.Tone2.Border.Static}"></TextBox>
                     <Button Grid.Row="4" Margin="120 7" Content="LOGIN" Click="LoginClick"></Button>
                 </Grid>
             </Border>

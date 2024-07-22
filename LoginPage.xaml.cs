@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Sockets;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -30,7 +31,25 @@ namespace NUPROJECT_vcs
         private void LoginClick(object sender, RoutedEventArgs e)
         {
             
+            NUPServerConnector connector = new NUPServerConnector();
+            connector.SendUserLogin(txtId.Text,txtPw.Text, LoginOk, LoginNg);
+
         }
+        private void LoginOk(string res)
+        {
+            MessageBox.Show("로그인 성공 *** 환영합니다");
+            MainWindow mainWindow = new MainWindow();
+            mainWindow.Show();
+
+            Window parent = Window.GetWindow(this);
+            parent.Close();
+        }
+
+        private void LoginNg(string res)
+        {
+            MessageBox.Show("로그인 실패 하였습니다.");
+        }
+
         private void Register_Click(object sender, RoutedEventArgs e)
         {
             Window parent = Window.GetWindow(this);
