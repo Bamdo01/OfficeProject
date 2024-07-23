@@ -13,6 +13,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.IO;
+
 
 namespace NUPROJECT_vcs
 {
@@ -32,12 +34,13 @@ namespace NUPROJECT_vcs
         {
             
             NUPServerConnector connector = new NUPServerConnector();
-            connector.SendUserLogin(txtId.Text,txtPw.Text, LoginOk, LoginNg);
+            connector.SendUserLogin(txtId.Text,txtPw.Password, LoginOk, LoginNg);
 
         }
         private void LoginOk(string res)
         {
-            MessageBox.Show("로그인 성공 *** 환영합니다");
+            MessageBox.Show($"로그인 성공 {txtId.Text}님 환영합니다");
+            File.WriteAllText("currentuser.txt", txtId.Text);
             MainWindow mainWindow = new MainWindow();
             mainWindow.Show();
 

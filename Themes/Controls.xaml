@@ -2816,6 +2816,8 @@
             </MultiTrigger>
         </Style.Triggers>
     </Style>
+    
+   
 
     <Style TargetType="{x:Type ListBoxItem}">
         <Setter Property="SnapsToDevicePixels" Value="True"/>

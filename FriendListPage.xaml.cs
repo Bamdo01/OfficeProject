@@ -30,5 +30,11 @@ namespace NUPROJECT_vcs
             MessageBox.Show("친구추가 클릭");
             MainFrame.Content = new FriendAddPage();
         }
+        private void FriendWaiting_click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("친구추가 클릭");
+            MainFrame.Content = new FriendWaitPage();
+        }
+        
     }
 }

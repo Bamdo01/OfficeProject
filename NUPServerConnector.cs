@@ -137,7 +137,8 @@ namespace NUPROJECT_vcs
         private void SendMessage(string msg, Action<string> OnReceiveOK, Action<string> OnReceiveNG)
         {
             // 서버 IP 주소 설정
-            string serverIp = "100.100.100.5";
+            //string serverIp = "200.200.200.5";
+            string serverIp = "localhost";
             // 서버 포트 주소 설정
             int port = 1103;
             // 전송할 메세지 정보

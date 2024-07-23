@@ -19,11 +19,11 @@
                     친구
                     <!--<Hyperlink Click="Register_Click">온라인</Hyperlink>
                     <Hyperlink Click="IdFind_Click">모두</Hyperlink>
-                    <Hyperlink Click="PwFind_Click">대기중</Hyperlink>
                     <Hyperlink Click="PwFind_Click">차단목록</Hyperlink>
                     <Hyperlink Click="PwFind_Click">친구 추가하기</Hyperlink>
                     -->
-                    <Hyperlink Click=" FriendAdd_click">친구 추가하기</Hyperlink>
+                    <Hyperlink Click="FriendAdd_click">친구 추가하기</Hyperlink>
+                    <Hyperlink Click="FriendWaiting_click">대기중</Hyperlink>
                 </TextBlock>
             </Border>
             
