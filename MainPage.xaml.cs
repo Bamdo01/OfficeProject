@@ -1,6 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using System.ComponentModel;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -18,11 +21,15 @@ namespace NUPROJECT_vcs
     /// <summary>
     /// MainPage.xaml에 대한 상호 작용 논리
     /// </summary>
+
+
+
     public partial class MainPage : Page
     {
         public MainPage()
         {
             InitializeComponent();
         }
+
     }
 }

@@ -14,7 +14,7 @@
                 <RowDefinition Height="1*"></RowDefinition>
                 <RowDefinition Height="3*"></RowDefinition>
             </Grid.RowDefinitions>
-            <Border Grid.Row="0" BorderThickness="0 0 0 1" BorderBrush="{DynamicResource ABrush.Tone3.Border.Static}">
+            <Border Grid.Row="0">
                 <Grid>
                     <Grid.RowDefinitions>
                         <RowDefinition Height="1*"></RowDefinition>
@@ -28,14 +28,18 @@
                             <ColumnDefinition Width="4*"></ColumnDefinition>
                             <ColumnDefinition Width="1*"></ColumnDefinition>
                         </Grid.ColumnDefinitions>
-                        <TextBox Grid.Column="0" Margin="8"></TextBox>
-                        <Button Grid.Column="1" Content="검색" Margin="10"></Button>
+                        <TextBox Grid.Column="0" Margin="8" x:Name="Fserch"></TextBox>
+                        <Button Grid.Column="1" Content="검색" Margin="10" Click="Window_Loaded"></Button>
                     </Grid>
                 </Grid>
             </Border>
-            <ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Auto">
-                
-            </ScrollViewer>
+            <DataGrid Grid.Row="1" FontSize="10" RowHeight="30"  x:Name="FriendCheck" CanUserAddRows="False"  VerticalScrollBarVisibility="Auto" AutoGenerateColumns="False" HeadersVisibility="None">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Width="2*" Binding="{Binding Name}" Header="Name" IsReadOnly="True"></DataGridTextColumn>
+                    <DataGridTextColumn Width="2*" Binding="{Binding Email}" Header="Email" IsReadOnly="True"></DataGridTextColumn>
+                    <DataGridHyperlinkColumn Width="1*" Binding="{Binding Fadd}" Header="Fadd" IsReadOnly="True"></DataGridHyperlinkColumn>
+                </DataGrid.Columns>
+            </DataGrid>
         </Grid>
     </Grid>
 </Page>

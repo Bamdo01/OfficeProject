@@ -85,6 +85,42 @@ namespace NUPROJECT_vcs
             this.SendMessage(query.ToString(), OnReceiveOK, OnReceiveNG);
         }
 
+        public void SendCreateRoom(string id, Action<string> OnReceiveOK, Action<string> OnReceiveNG)
+        {
+            StringBuilder query = new StringBuilder();
+            query.Append($"COMMAND:CREATE_ROOM{Environment.NewLine}");
+            query.Append($"CREATOR_USERID:{id}{Environment.NewLine}");
+
+            this.SendMessage(query.ToString(), OnReceiveOK, OnReceiveNG);
+        }
+
+        public void SendJoinRoom(string id, string roomid, Action<string> OnReceiveOK, Action<string> OnReceiveNG)
+        {
+            StringBuilder query = new StringBuilder();
+            query.Append($"COMMAND:JOIN_ROOM{Environment.NewLine}");
+            query.Append($"USERID:{id}{Environment.NewLine}");
+            query.Append($"ROOMID:{roomid}{Environment.NewLine}");
+
+            this.SendMessage(query.ToString(), OnReceiveOK, OnReceiveNG);
+        }
+
+        public void SendGetUsers(Action<string> OnReceiveOK, Action<string> OnReceiveNG)
+        {
+            StringBuilder query = new StringBuilder();
+            query.Append($"COMMAND:GET_USERLIST{Environment.NewLine}");
+
+            this.SendMessage(query.ToString(), OnReceiveOK, OnReceiveNG);
+        }
+
+        public void SendGetUser(string id, Action<string> OnReceiveOK, Action<string> OnReceiveNG)
+        {
+            StringBuilder query = new StringBuilder();
+            query.Append($"COMMAND:GET_USER{Environment.NewLine}");
+            query.Append($"USERID:{id}{Environment.NewLine}");
+
+            this.SendMessage(query.ToString(), OnReceiveOK, OnReceiveNG);
+        }
+
         public void SendUserResetPassword(string id, string newPw, Action<string> OnReceiveOK, Action<string> OnReceiveNG)
         {
             byte[] computeHash = SHA256.Create().ComputeHash(Encoding.UTF8.GetBytes(newPw));
@@ -173,14 +209,13 @@ namespace NUPROJECT_vcs
 
                     System.Windows.Application.Current.Dispatcher.BeginInvoke(new Action(() =>
                     {
-                        if (response.Contains("RESULT:OK"))
-                        {
-
-                            state.OnReceiveOK(response);
-                        }
-                        else if (response.Contains("RESULT:NG"))
+                        if (response.Contains("RESULT:NG"))
                         {
                             state.OnReceiveNG(response);
+                        }
+                        else
+                        {
+                            state.OnReceiveOK(response);
                         }
                     }));
                 }
