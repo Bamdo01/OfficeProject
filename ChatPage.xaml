@@ -9,6 +9,45 @@
       Title="ChatPage">
 
     <Grid>
-        <TextBlock>채팅 페이지</TextBlock>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="133*"/>
+            <RowDefinition Height="317*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"></ColumnDefinition>
+            <ColumnDefinition Width="3*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+
+        <StackPanel Grid.Column="0" Background="#2C2F33" Grid.RowSpan="2">
+            <TextBlock Text="채팅방 목록" Foreground="White" FontSize="20" Margin="10" />
+            <Button Content="채팅방 1" Margin="10" Padding="10" Foreground="White" Background="#23272A"/>
+            <Button Content="채팅방 2" Margin="10" Padding="10" Foreground="White" Background="#23272A"/>
+            <Button Content="채팅방 3" Margin="10" Padding="10" Foreground="White" Background="#23272A"/>
+        </StackPanel>
+
+        <Grid Grid.Column="1" Background="#36393F" Grid.RowSpan="2">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+            </Grid.RowDefinitions>
+
+            <TextBlock Text="채팅방 이름" Foreground="White" FontSize="20" Margin="10" Grid.Row="0"/>
+
+            <ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Auto" Background="#2F3136">
+                <StackPanel>
+                    <TextBlock Text="전범수: 안녕하십니까" Foreground="White" Margin="10" />
+                    <TextBlock Text="민경은: 그래그래" Foreground="White" Margin="10" />
+                </StackPanel>
+            </ScrollViewer>
+
+
+            <DockPanel Grid.Row="2" Margin="10">
+                <TextBox Width="501" Height="40" DockPanel.Dock="Left" Background="#ffff" Padding="5"/>
+                <Button Content="전송" Width="82" DockPanel.Dock="Right" Background="#7289DA" Foreground="White"/>
+            </DockPanel>
+        </Grid>
     </Grid>
+
 </Page>
