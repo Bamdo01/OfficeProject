@@ -1,4 +1,4 @@
-﻿<Window x:Class="NUPROJECT_vcs.MainWindow"
+﻿<Window x:Class="WPFOfficeProject.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="Your Application Title" Height="450" Width="800"

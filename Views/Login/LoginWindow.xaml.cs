@@ -13,7 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using System.Net.Sockets;
 
-namespace NUPROJECT_vcs
+namespace WPFOfficeProject
 {
     /// <summary>
     /// LoginWindow.xaml에 대한 상호 작용 논리

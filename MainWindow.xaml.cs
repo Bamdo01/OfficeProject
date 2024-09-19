@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Windows;
 
-namespace NUPROJECT_vcs
+namespace WPFOfficeProject
 {
     public partial class MainWindow : Window
     {

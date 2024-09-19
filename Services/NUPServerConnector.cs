@@ -7,7 +7,7 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace NUPROJECT_vcs
+namespace WPFOfficeProject
 {
     public class NUPServerConnector
     {

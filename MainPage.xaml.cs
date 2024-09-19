@@ -16,7 +16,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace NUPROJECT_vcs
+namespace WPFOfficeProject
 {
     /// <summary>
     /// MainPage.xaml에 대한 상호 작용 논리

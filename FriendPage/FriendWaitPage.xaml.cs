@@ -16,7 +16,7 @@ using System.IO;
 using System.Data;
 
 
-namespace NUPROJECT_vcs
+namespace WPFOfficeProject
 {
     /// <summary>
     /// FriendWaitPage.xaml에 대한 상호 작용 논리
