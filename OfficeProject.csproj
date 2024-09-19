@@ -56,9 +56,6 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="ChatPage.xaml.cs">
-      <DependentUpon>ChatPage.xaml</DependentUpon>
-    </Compile>
     <Compile Include="FriendListPage.xaml.cs">
       <DependentUpon>FriendListPage.xaml</DependentUpon>
     </Compile>
@@ -93,10 +90,6 @@
     <Compile Include="Themes\ScrollViewerInnerBorderThicknessConverter.cs" />
     <Compile Include="Themes\ThemesController.cs" />
     <Compile Include="Themes\ThemeType.cs" />
-    <Page Include="ChatPage.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="FriendListPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

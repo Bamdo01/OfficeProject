@@ -33,8 +33,22 @@
                     </Grid>
                 </Grid>
             </Border>
+            <!--<DataGrid Grid.Row="1" FontSize="10" RowHeight="30"  x:Name="FriendCheck" CanUserAddRows="False"  VerticalScrollBarVisibility="Auto" AutoGenerateColumns="False" HeadersVisibility="None">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Width="2*" Binding="{Binding Name}" Header="Name" IsReadOnly="True"></DataGridTextColumn>
+                    <DataGridTextColumn Width="2*" Binding="{Binding Email}" Header="Email" IsReadOnly="True"></DataGridTextColumn>
+                    <DataGridTextColumn Width="1*" Binding="{Binding Fadd}" Header="Fadd" IsReadOnly="True">
+                        <DataGridTextColumn.ElementStyle>
+                            <Style TargetType="TextBlock">
+                                <EventSetter Event="PreviewMouseDown" Handler="FriendAdd_Click"/>
+                            </Style>
+                        </DataGridTextColumn.ElementStyle>
+                    </DataGridTextColumn>
+                </DataGrid.Columns>
+            </DataGrid>
+            -->
             <Grid Grid.Row="1" Name="SerchList">
-                <Grid.RowDefinitions>
+                <!-- <Grid.RowDefinitions>
                     <RowDefinition Height="30"></RowDefinition>
                 </Grid.RowDefinitions>
                 <Grid Grid.Row="0">
@@ -57,6 +71,7 @@
                         </Grid>
                     </Border>
                 </Grid>
+                -->
             </Grid>
         </Grid>
     </Grid>

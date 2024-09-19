@@ -18,11 +18,6 @@ namespace NUPROJECT_vcs
             MainFrame.Content = new MainPage();
         }
 
-        private void OnChatClick(object sender, RoutedEventArgs e)
-        {
-            MainFrame.Content = new ChatPage();
-        }
-
 
     }
 }
