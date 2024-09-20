@@ -9,28 +9,40 @@
       Title="FriendWaitPage">
 
     <Grid>
-        <Grid>
-            <DataGrid Grid.Row="1" FontSize="10" RowHeight="30"  x:Name="WaitGrid" CanUserAddRows="False"  VerticalScrollBarVisibility="Auto" AutoGenerateColumns="False" HeadersVisibility="None">
-                <DataGrid.Columns>
-                    <DataGridTextColumn Width="2*" Binding="{Binding Name}" Header="Name" IsReadOnly="True"></DataGridTextColumn>
-                    
-                    <DataGridTextColumn Width="1*" Binding="{Binding FAcc}" Header="FAcc" IsReadOnly="True">
-                        <DataGridTextColumn.ElementStyle>
-                            <Style TargetType="TextBlock">
-                                <EventSetter Event="PreviewMouseDown" Handler="FriedAcc_Click"/>
-                            </Style>
-                        </DataGridTextColumn.ElementStyle>
-                    </DataGridTextColumn>
-                    
-                    <DataGridTextColumn Width="1*" Binding="{Binding FCan}" Header="FCan" IsReadOnly="True">
-                        <DataGridTextColumn.ElementStyle>
-                            <Style TargetType="TextBlock">
-                                <EventSetter Event="PreviewMouseDown" Handler="Friedcan_Click"/>
-                            </Style>
-                        </DataGridTextColumn.ElementStyle>
-                    </DataGridTextColumn>
-                </DataGrid.Columns>
-            </DataGrid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.5*"></RowDefinition>
+            <RowDefinition Height="10*"></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="0">
+            <TextBlock>대기중 - n명</TextBlock>
         </Grid>
+        <Grid Grid.Row="1">
+            <StackPanel>
+                <Border Height="50" Margin="5" CornerRadius="10" BorderThickness="1" BorderBrush="Gray">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="6*"></ColumnDefinition>
+                            <ColumnDefinition Width="1*"></ColumnDefinition>
+                            <ColumnDefinition Width="1*"></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+
+                        <Grid Grid.Column="0">
+                            <TextBlock VerticalAlignment="Center" HorizontalAlignment="Left" Margin="10" FontSize="20">전범수</TextBlock>
+                        </Grid>
+
+                        <Grid Grid.Column="1">
+                            <Button Content="O"></Button>
+                        </Grid>
+
+                        <Grid Grid.Column="2">
+                            <Button Content="X"></Button>
+                        </Grid>
+                    </Grid>
+                </Border>
+                        
+            </StackPanel>
+        </Grid>
+
     </Grid>
 </Page>
