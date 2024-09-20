@@ -55,12 +55,12 @@ namespace WPFOfficeProject
 
         private void Register_Click(object sender, RoutedEventArgs e)
         {
-            //회원가입 로직부분
-            MessageBox.Show("Register clicked!");
-            // Window parent = Window.GetWindow(this);
-            // (parent as LoginWindow).LoginFrame.NavigationService.Navigate(regPage);
-            LoginViewModel loginViewModel = new LoginViewModel();
-            loginViewModel.FrameSource(RegisterPage.xaml);
+            ////회원가입 로직부분
+            //MessageBox.Show("Register clicked!");
+            //// Window parent = Window.GetWindow(this);
+            //// (parent as LoginWindow).LoginFrame.NavigationService.Navigate(regPage);
+            //LoginViewModel loginViewModel = new LoginViewModel();
+            //loginViewModel.FrameSource(RegisterPage.xaml);
         }
         private void IdFind_Click(object sender, RoutedEventArgs e)
         {

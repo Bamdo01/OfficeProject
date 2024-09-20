@@ -56,30 +56,30 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="ChatPage.xaml.cs">
+    <Compile Include="Views\ChatPage.xaml.cs">
       <DependentUpon>ChatPage.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="FriendListPage.xaml.cs">
-      <DependentUpon>FriendListPage.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="FriendPage\FriendAddPage.xaml.cs">
-      <DependentUpon>FriendAddPage.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="FriendPage\FriendWaitPage.xaml.cs">
-      <DependentUpon>FriendWaitPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Services\NUPServerConnector.cs" />
     <Compile Include="ViewModels\LoginViewModel.cs" />
-    <Compile Include="Views\Login\LoginPage.xaml.cs">
+    <Compile Include="Views\FriendViews\FriendAddPage.xaml.cs">
+      <DependentUpon>FriendAddPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\FriendViews\FriendListPage.xaml.cs">
+      <DependentUpon>FriendListPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\FriendViews\FriendWaitPage.xaml.cs">
+      <DependentUpon>FriendWaitPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\LoginViews\LoginPage.xaml.cs">
       <DependentUpon>LoginPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\Login\LoginWindow.xaml.cs">
+    <Compile Include="Views\LoginViews\LoginWindow.xaml.cs">
       <DependentUpon>LoginWindow.xaml</DependentUpon>
     </Compile>
-    <Compile Include="MainPage.xaml.cs">
+    <Compile Include="Views\MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\Login\RegisterPage.xaml.cs">
+    <Compile Include="Views\LoginViews\RegisterPage.xaml.cs">
       <DependentUpon>RegisterPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Themes\Attached\CornerRadiusHelper.cs" />
@@ -94,35 +94,35 @@
     <Compile Include="Themes\ScrollViewerInnerBorderThicknessConverter.cs" />
     <Compile Include="Themes\ThemesController.cs" />
     <Compile Include="Themes\ThemeType.cs" />
-    <Page Include="ChatPage.xaml">
+    <Page Include="Views\ChatPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="FriendListPage.xaml">
+    <Page Include="Views\FriendViews\FriendAddPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\FriendViews\FriendListPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\FriendViews\FriendWaitPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\LoginViews\LoginPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="FriendPage\FriendAddPage.xaml">
+    <Page Include="Views\LoginViews\LoginWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="FriendPage\FriendWaitPage.xaml">
+    <Page Include="Views\MainPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\Login\LoginPage.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Views\Login\LoginWindow.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="MainPage.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="MainWindow.xaml">
+    <Page Include="Views\MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -130,11 +130,11 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="MainWindow.xaml.cs">
+    <Compile Include="Views\MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="Views\Login\RegisterPage.xaml">
+    <Page Include="Views\LoginViews\RegisterPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

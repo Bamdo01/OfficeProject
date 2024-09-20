@@ -37,28 +37,28 @@ namespace WPFOfficeProject
         public FriendWaitPage()
         {
             InitializeComponent();
-            NUPServerConnector connector = new NUPServerConnector();
-            connector.SendUserGetPendingFriends(File.ReadAllText("currentuser.txt"),OK,NG);
+           // NUPServerConnector connector = new NUPServerConnector();
+           // connector.SendUserGetPendingFriends(File.ReadAllText("currentuser.txt"),OK,NG);
 
-           _list = new List<FriendWaite>
-            {
+           //_list = new List<FriendWaite>
+           // {
 
-            };
+           // };
         }
 
-        private void OK(string rsp)
-        {
-            MessageBox.Show(rsp);
+        //private void OK(string rsp)
+        //{
+        //    MessageBox.Show(rsp);
 
-            string[] lines = rsp.Split(new string[] { Environment.NewLine },  //개행 단위로 문자열을 쪼갬
-               StringSplitOptions.RemoveEmptyEntries);// 비어있는 라인은 무시하고 가져옴
+        //    string[] lines = rsp.Split(new string[] { Environment.NewLine },  //개행 단위로 문자열을 쪼갬
+        //       StringSplitOptions.RemoveEmptyEntries);// 비어있는 라인은 무시하고 가져옴
 
-            for (int i = 1; i < lines.Length; i++)
-            {
-                _list.Add(new FriendWaite { Name = lines[i], FAcc = "수락" , FCan = "거절" });
-            }
-            WaitGrid.ItemsSource = _list;
-        }
+        //    for (int i = 1; i < lines.Length; i++)
+        //    {
+        //        _list.Add(new FriendWaite { Name = lines[i], FAcc = "수락" , FCan = "거절" });
+        //    }
+        //    WaitGrid.ItemsSource = _list;
+        //}
 
         private void NG(string rsp)
         {
