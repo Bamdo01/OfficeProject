@@ -8,10 +8,10 @@
         Title="LoginWindow" Height="450" Width="350"
         Style="{DynamicResource CustomWindowStyle}">
 
-    <Window.DataContext>
-        <!-- LoginViewModel을 데이터 컨텍스트로 설정 -->
+    <!--<Window.DataContext>
+         LoginViewModel을 데이터 컨텍스트로 설정 
         <local:LoginViewModel />
-    </Window.DataContext>
+    </Window.DataContext> -->
 
     <Grid>
         <Grid.RowDefinitions>

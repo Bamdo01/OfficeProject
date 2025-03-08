@@ -23,13 +23,17 @@ namespace WPFOfficeProject
     /// </summary>
     public partial class LoginPage : Page
     {
-        private RegisterPage regPage;
-
-        public LoginPage()
+        public LoginPage(LoginViewModel viewModel)
         {
-            //regPage = new RegisterPage(this);
             InitializeComponent();
+            this.DataContext = viewModel;  // ✅ 기존 ViewModel을 유지
         }
+
+        //public LoginPage()
+        //{
+        //    //regPage = new RegisterPage(this);
+        //    InitializeComponent();
+        //}
         private void LoginClick(object sender, RoutedEventArgs e)
         {
             
@@ -53,15 +57,6 @@ namespace WPFOfficeProject
         //    MessageBox.Show("로그인 실패 하였습니다.");
         //}
 
-        private void Register_Click(object sender, RoutedEventArgs e)
-        {
-            ////회원가입 로직부분
-            //MessageBox.Show("Register clicked!");
-            //// Window parent = Window.GetWindow(this);
-            //// (parent as LoginWindow).LoginFrame.NavigationService.Navigate(regPage);
-            //LoginViewModel loginViewModel = new LoginViewModel();
-            //loginViewModel.FrameSource(RegisterPage.xaml);
-        }
         private void IdFind_Click(object sender, RoutedEventArgs e)
         {
             //아이디 찾기 로직부분

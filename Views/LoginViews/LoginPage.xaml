@@ -6,7 +6,10 @@
       xmlns:local="clr-namespace:WPFOfficeProject"
       mc:Ignorable="d" 
       d:DesignHeight="375" d:DesignWidth="350"
-      Title="LoginPage">
+      Title="LoginPage"
+      >
+
+
 
     <Grid>
         <Grid>
@@ -28,12 +31,12 @@
                     <TextBox Grid.Row="1" x:Name="txtId" Margin="16 0 16 10" BorderThickness="1" FontSize="16" BorderBrush="{DynamicResource ABrush.Tone2.Border.Static}" VerticalContentAlignment="Center"></TextBox>
                     <TextBlock Grid.Row="2" Margin="16 0 0 0" VerticalAlignment="Center" FontSize="16">비밀번호</TextBlock>
                     <PasswordBox Grid.Row="3" x:Name="txtPw" Margin="16 0 16 10" BorderThickness="1" BorderBrush="{DynamicResource ABrush.Tone2.Border.Static}" FontSize="16" VerticalContentAlignment="Center"></PasswordBox>
-                    <Button Grid.Row="4" Margin="120 7" Content="LOGIN" Click="LoginClick"></Button>
+                    <Button Grid.Row="4" Margin="120 7" Content="LOGIN" Command="{Binding LoginCommand}"></Button>
                 </Grid>
             </Border>
 
             <TextBlock Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center">
-            <Hyperlink Click="Register_Click">회원가입</Hyperlink>
+            <Hyperlink Command="{Binding RegisterCommand}">회원가입</Hyperlink>
             <Hyperlink Click="IdFind_Click">아이디 찾기</Hyperlink>
             <Hyperlink Click="PwFind_Click">비밀번호 찾기</Hyperlink>
             </TextBlock>

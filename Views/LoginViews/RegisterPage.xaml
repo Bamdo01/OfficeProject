@@ -66,8 +66,8 @@
                     <ColumnDefinition Width="1*"></ColumnDefinition>
                     <ColumnDefinition Width="1*"></ColumnDefinition>
                 </Grid.ColumnDefinitions>
-                <Button Grid.Column="0" Margin="8" FontSize="16" Click="ConfirnClick" >확인</Button>
-                <Button Grid.Column="1" Margin="8" FontSize="16" Click="CancelClick">취소</Button>
+                <Button Grid.Column="0" Margin="8" FontSize="16" >확인</Button>
+                <Button Grid.Column="1" Margin="8" FontSize="16" >취소</Button>
             </Grid>
         </Grid>
         

@@ -13,7 +13,9 @@
                 <ResourceDictionary Source="Themes/ControlColours.xaml"/>
                 <!-- Contains all of the control styles (Button, ListBox, etc) -->
                 <ResourceDictionary Source="Themes/Controls.xaml"/>
+                
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
+        
     </Application.Resources>
 </Application>
