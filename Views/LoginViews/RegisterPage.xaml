@@ -50,13 +50,13 @@
                             <RowDefinition Height="1*"></RowDefinition>
                             <RowDefinition Height="1*"></RowDefinition>
                         </Grid.RowDefinitions>
-                        <TextBox Grid.Row="0" x:Name="txtId" Margin="5" ></TextBox>
-                        <TextBox Grid.Row="1" x:Name="txtPw" Margin="5"></TextBox>
-                        <TextBox Grid.Row="2" x:Name="txtEmail" Margin="5"></TextBox>
-                        <TextBox Grid.Row="3" x:Name="txtAddr" Margin="5"></TextBox>
-                        <DatePicker Grid.Row="4" x:Name="dpBirth" Margin="5"></DatePicker>
-                        <TextBox Grid.Row="5" x:Name="txtGender" Margin="5"></TextBox>
-                        <TextBox Grid.Row="6" x:Name="txtPhone" Margin="5"></TextBox>
+                        <TextBox Grid.Row="0" x:Name="txtId" Margin="5" Text="{Binding Id, Mode=TwoWay}"/>
+                        <TextBox Grid.Row="1" x:Name="txtPw" Margin="5" Text="{Binding Password, Mode=TwoWay}"/>
+                        <TextBox Grid.Row="2" x:Name="txtEmail" Margin="5" Text="{Binding Email, Mode=TwoWay}"/>
+                        <TextBox Grid.Row="3" x:Name="txtAddr" Margin="5" Text="{Binding Address, Mode=TwoWay}"/>
+                        <DatePicker Grid.Row="4" x:Name="dpBirth" Margin="5" SelectedDate="{Binding BirthDate, Mode=TwoWay}"/>
+                        <TextBox Grid.Row="5" x:Name="txtGender" Margin="5" Text="{Binding Gender, Mode=TwoWay}"/>
+                        <TextBox Grid.Row="6" x:Name="txtPhone" Margin="5" Text="{Binding Phone, Mode=TwoWay}"/>
                     </Grid>
                 </Grid>
             </Border>
@@ -66,8 +66,8 @@
                     <ColumnDefinition Width="1*"></ColumnDefinition>
                     <ColumnDefinition Width="1*"></ColumnDefinition>
                 </Grid.ColumnDefinitions>
-                <Button Grid.Column="0" Margin="8" FontSize="16" >확인</Button>
-                <Button Grid.Column="1" Margin="8" FontSize="16" >취소</Button>
+                <Button Grid.Column="0" Margin="8" FontSize="16"  Command="{Binding RegisterCommand}" >확인</Button>
+                <Button Grid.Column="1" Margin="8" FontSize="16" Command="{Binding CancelCommand}" >취소</Button>
             </Grid>
         </Grid>
         

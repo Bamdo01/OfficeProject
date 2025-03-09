@@ -41,9 +41,9 @@ namespace WPFOfficeProject
 
             if (loginWindow != null)
             {
-                MainWindow mainWindow = new MainWindow(); // ✅ 메인 윈도우 생성
-                mainWindow.Show();  // ✅ 메인 윈도우 표시
-                loginWindow.Close();  // ✅ 기존 로그인 윈도우 닫기
+                MainWindow mainWindow = new MainWindow(); // 메인 윈도우 생성
+                mainWindow.Show();  // 메인 윈도우 표시
+                loginWindow.Close();  // 기존 로그인 윈도우 닫기
             }
 
 
@@ -57,7 +57,7 @@ namespace WPFOfficeProject
         {
             if (FrameSource == null)
             {
-                MessageBox.Show("FrameSource가 null입니다!");  // 🚨 디버깅용 메시지
+                MessageBox.Show("FrameSource가 null입니다!");  // 디버깅용 메시지
             }
             else
             {
@@ -65,7 +65,7 @@ namespace WPFOfficeProject
             }
 
 
-            FrameSource = "RegisterPage.xaml";  // ✅ 회원가입 페이지로 이동
+            FrameSource = "RegisterPage.xaml";  // 회원가입 페이지로 이동
         }
 
 
