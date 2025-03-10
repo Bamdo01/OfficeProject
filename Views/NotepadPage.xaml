@@ -1,0 +1,11 @@
+﻿<Page x:Class="WPFOfficeProject.NotepadPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      Title="메모장">
+    <Grid>
+        <TextBlock Text="메모장 페이지" 
+                   HorizontalAlignment="Center" 
+                   VerticalAlignment="Center"
+                   FontSize="24"/>
+    </Grid>
+</Page>

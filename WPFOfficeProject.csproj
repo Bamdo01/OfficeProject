@@ -56,6 +56,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="ViewModels\MainWindowViewModel.cs" />
     <Compile Include="ViewModels\RegisterViewModel.cs" />
     <Compile Include="ViewModels\RelayCommand.cs" />
     <Compile Include="Views\ChatPage.xaml.cs">
@@ -96,6 +97,12 @@
     <Compile Include="Themes\ScrollViewerInnerBorderThicknessConverter.cs" />
     <Compile Include="Themes\ThemesController.cs" />
     <Compile Include="Themes\ThemeType.cs" />
+    <Compile Include="Views\NotepadPage.xaml.cs">
+      <DependentUpon>NotepadPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SchedulePage.xaml.cs">
+      <DependentUpon>SchedulePage.xaml</DependentUpon>
+    </Compile>
     <Page Include="Views\ChatPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -171,6 +178,14 @@
     <Page Include="Themes\Controls.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\NotepadPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\SchedulePage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
   <ItemGroup>

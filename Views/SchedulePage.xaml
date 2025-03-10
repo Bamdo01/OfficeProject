@@ -1,0 +1,11 @@
+﻿<Page x:Class="WPFOfficeProject.SchedulePage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      Title="일정">
+    <Grid>
+        <TextBlock Text="일정 페이지" 
+                   HorizontalAlignment="Center" 
+                   VerticalAlignment="Center"
+                   FontSize="24"/>
+    </Grid>
+</Page>
