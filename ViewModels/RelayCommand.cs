@@ -1,41 +1,46 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Input;
 
 namespace WPFOfficeProject
 {
     public class RelayCommand : ICommand
     {
-        private readonly Action<object> _execute; // 명령을 실행하는 로직
-        private readonly Predicate<object> _canExecute; // 명령이 실행 가능한지 판단하는 로직
+        private readonly Action<object> _executeWithParam;
+        private readonly Action _executeWithoutParam;
+        private readonly Predicate<object> _canExecute;
 
+        // 매개변수 없는 생성자 (Action)
+        public RelayCommand(Action execute, Func<bool> canExecute = null)
+        {
+            _executeWithoutParam = execute ?? throw new ArgumentNullException(nameof(execute));
+            if (canExecute != null)
+                _canExecute = _ => canExecute();
+        }
+
+        // 매개변수 있는 생성자 (Action<object>)
         public RelayCommand(Action<object> execute, Predicate<object> canExecute = null)
         {
-            _execute = execute ?? throw new ArgumentNullException(nameof(execute));
+            _executeWithParam = execute ?? throw new ArgumentNullException(nameof(execute));
             _canExecute = canExecute;
         }
 
-        // ICommand의 CanExecute 구현
         public bool CanExecute(object parameter)
         {
             return _canExecute == null || _canExecute(parameter);
         }
 
-        // ICommand의 Execute 구현
         public void Execute(object parameter)
         {
-            _execute(parameter);
+            if (_executeWithParam != null)
+                _executeWithParam(parameter);
+            else
+                _executeWithoutParam?.Invoke();
         }
 
-        // 명령이 실행 가능 여부가 변경될 때 호출
         public event EventHandler CanExecuteChanged
         {
-            add { CommandManager.RequerySuggested += value; }
-            remove { CommandManager.RequerySuggested -= value; }
+            add => CommandManager.RequerySuggested += value;
+            remove => CommandManager.RequerySuggested -= value;
         }
     }
-
 }

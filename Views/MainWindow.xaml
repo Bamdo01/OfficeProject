@@ -18,14 +18,12 @@
                 <RowDefinition Height="64"></RowDefinition>
                 <RowDefinition Height="64"></RowDefinition>
                 <RowDefinition Height="64"></RowDefinition>
-                <RowDefinition Height="64"></RowDefinition>
             </Grid.RowDefinitions>
             <Button Grid.Row="0" Margin="6" Content="메인" Command="{Binding NavigateToMainCommand}"></Button>
             <Button Grid.Row="1" Margin="6" Content="친구&#x0a;목록" Command="{Binding NavigateToFriendListCommand}"></Button>
             <Button Grid.Row="2" Margin="6" Content="채팅" Command="{Binding NavigateToChatCommand}"></Button>
             <Button Grid.Row="3" Margin="6" Content="메모장" Command="{Binding NavigateToNotepadCommand}"></Button>
-            <Button Grid.Row="4" Margin="6" Content="일정" Command="{Binding NavigateToScheduleCommand}"></Button>
-            <Button Grid.Row="6" Margin="6" Content="로그아웃" Command="{Binding LogoutCommand}"></Button>
+            <Button Grid.Row="4" Margin="6" Content="로그아웃" Command="{Binding LogoutCommand}"></Button>
         </Grid>
 
         <Frame Grid.Column ="1" x:Name="MainFrame" NavigationUIVisibility="Hidden" Content="{Binding CurrentPage}">

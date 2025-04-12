@@ -23,6 +23,7 @@ namespace WPFOfficeProject
         public NotepadPage()
         {
             InitializeComponent();
+            DataContext = new NotepadViewModel();
         }
     }
 }

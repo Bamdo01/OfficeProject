@@ -73,7 +73,7 @@ namespace WPFOfficeProject
 
             // 커맨드 연결
             NewNoteCommand = new RelayCommand(NewNote);
-            DeleteNoteCommand = new RelayCommand(DeleteNote);// 메모관련된 기능이라 일단 스킵할게요
+            DeleteNoteCommand = new RelayCommand(DeleteNote);
 
             // 기본 메모 추가
             Notes.Add(new NoteItem { Title = "첫 메모", Content = "내용을 입력하세요." });
