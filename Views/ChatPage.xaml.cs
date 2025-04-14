@@ -23,6 +23,7 @@ namespace WPFOfficeProject
         public ChatPage()
         {
             InitializeComponent();
+            this.DataContext = new ChatViewModel();
         }
     }
 }

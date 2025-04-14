@@ -11,7 +11,7 @@ namespace WPFOfficeProject
         {
             // 처음에 로드할 페이지 설정
             FrameSource = "LoginPage.xaml";
-            MessageBox.Show($"FrameSource 변경됨: {FrameSource}"); // 로그 출력
+            MessageBox.Show($"FrameSource 변경됨: {FrameSource}"); // 로그 출력인데 이거 없애면 오류 발생함??....왜지
 
             // 로그인 및 회원가입 커맨드 초기화
             LoginCommand = new RelayCommand(ExecuteLogin /*, CanExecuteLogin*/);  // 나중에 검사 추가 가능

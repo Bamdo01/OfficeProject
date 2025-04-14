@@ -33,7 +33,7 @@ namespace WPFOfficeProject
             NavigateToChatCommand = new RelayCommand(_ => CurrentPage = new ChatPage());
             NavigateToFriendListCommand = new RelayCommand(_ => CurrentPage = new FriendListPage());
             NavigateToNotepadCommand = new RelayCommand(_ => CurrentPage = new NotepadPage());
-            //NavigateToScheduleCommand = new RelayCommand(_ => CurrentPage = new SchedulePage());
+            //NavigateToScheduleCommand = new RelayCommand(_ => CurrentPage = new SchedulePage()); ㅈㅈ
             NavigateToScheduleCommand = new RelayCommand(_ =>
             {
                 Console.WriteLine("📌 일정 페이지로 이동"); // 로그 확인
