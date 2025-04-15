@@ -36,9 +36,9 @@
                 </Frame>
                 <Border Grid.Column="1" BorderThickness="1 0 0 0" BorderBrush="{DynamicResource ABrush.Tone3.Border.Static}">
                     <ListBox Grid.Column="1" BorderThickness="0" Background="Transparent">
-                        <ListBoxItem Content="첫 번째 항목"/>
-                        <ListBoxItem Content="두 번째 항목"/>
-                        <ListBoxItem Content="세 번째 항목"/>
+                        <ListBoxItem Content="친구 1"/>
+                        <ListBoxItem Content="친구 2"/>
+                        <ListBoxItem Content="친구 3"/>
                     </ListBox>
                 </Border>
             </Grid>

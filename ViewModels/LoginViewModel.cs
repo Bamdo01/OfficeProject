@@ -2,6 +2,7 @@
 using System.Linq;
 using System.Windows;
 using System.Windows.Input;
+using WPFOfficeProject.Models;
 
 namespace WPFOfficeProject
 {
@@ -19,6 +20,17 @@ namespace WPFOfficeProject
         }
 
         private string _frameSource; // 로그인 페이지 경로
+        private string _userId; //아이디
+
+        public string UserId //아이디 받아서 저장하는 함수
+        {
+            get => _userId;
+            set
+            {
+                _userId = value;
+                OnPropertyChanged(nameof(UserId));
+            }
+        }
         public string FrameSource
         {
             get { return _frameSource; }
@@ -38,6 +50,8 @@ namespace WPFOfficeProject
 
             // 현재 실행 중인 `LoginWindow` 가져오기
             Window loginWindow = Application.Current.Windows.OfType<LoginWindow>().FirstOrDefault();
+
+            UserModel.UserId = UserId;
 
             if (loginWindow != null)
             {

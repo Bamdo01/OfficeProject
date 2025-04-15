@@ -29,6 +29,7 @@ namespace WPFOfficeProject
         public MainPage()
         {
             InitializeComponent();
+            this.DataContext = new MainPageViewModel();
         }
 
     }

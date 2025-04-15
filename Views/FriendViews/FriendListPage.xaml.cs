@@ -32,7 +32,7 @@ namespace WPFOfficeProject
         }
         private void FriendWaiting_click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("친구추가 클릭");
+            MessageBox.Show("친구대기 클릭");
             MainFrame.Content = new FriendWaitPage();
         }
         

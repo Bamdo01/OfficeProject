@@ -28,7 +28,7 @@
                         <RowDefinition Height="1*"></RowDefinition>
                     </Grid.RowDefinitions>
                     <Border Grid.Row="0" CornerRadius="10 10 0 0" Background="{DynamicResource ABrush.Tone2.Border.Static}">
-                        <TextBlock Margin="5">경조사</TextBlock>
+                        <TextBlock Margin="5">일정</TextBlock>
                     </Border>
                     <ListBox Grid.Row="1" BorderThickness="0" Background="Transparent">
                         <ListBoxItem Content="첫 번째 항목"/>
@@ -38,7 +38,7 @@
                 </Grid>
             </Border>
 
-            <!--오른쪽 상단 로그인 상태표, 경조사표-->
+            <!--오른쪽 상단 로그인 상태표-->
             <Grid Grid.Column="1">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="1*"></RowDefinition>
@@ -46,7 +46,7 @@
                 </Grid.RowDefinitions>
 
                 <Border Grid.Row="0" Margin="10" CornerRadius="10" BorderThickness="1" BorderBrush="{DynamicResource ABrush.Tone2.Border.Static}">
-                    <TextBlock Margin="5">OOO 님 환영합니다</TextBlock>
+                    <TextBlock Margin="5" Text="{Binding WelcomeMessage}"> </TextBlock>
                 </Border>
 
                 <Border Grid.Row="1"  CornerRadius="10" Margin="10" BorderThickness="1" BorderBrush="{DynamicResource ABrush.Tone2.Border.Static}">
@@ -56,12 +56,12 @@
                             <RowDefinition Height="1*"></RowDefinition>
                         </Grid.RowDefinitions>
                         <Border Grid.Row="0" CornerRadius="10 10 0 0" Background="{DynamicResource ABrush.Tone2.Border.Static}">
-                            <TextBlock Margin="5">경조사</TextBlock>
+                            <TextBlock Margin="5">온라인</TextBlock>
                         </Border>
                         <ListBox Grid.Row="1" BorderThickness="0" Background="Transparent">
-                            <ListBoxItem Content="첫 번째 항목"/>
-                            <ListBoxItem Content="두 번째 항목"/>
-                            <ListBoxItem Content="세 번째 항목"/>
+                            <ListBoxItem Content="온라인 유저 1"/>
+                            <ListBoxItem Content="온라인 유저 2"/>
+                            <ListBoxItem Content="온라인 유저 3"/>
                         </ListBox>
                     </Grid>
                 </Border>
@@ -79,7 +79,7 @@
                 </Border>
 
                 <TextBlock Grid.Row="1" Margin="5">
-                    최근메모한거
+                    메모내용
                 </TextBlock>
             </Grid>
         </Border>

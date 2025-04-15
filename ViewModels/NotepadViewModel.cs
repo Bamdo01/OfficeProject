@@ -65,6 +65,9 @@ namespace WPFOfficeProject
         public ICommand NewNoteCommand { get; }
         public ICommand DeleteNoteCommand { get; }
 
+        public ICommand SaveCommand { get; }
+
+
         // ✅ 생성자
         public NotepadViewModel()
         {
@@ -74,6 +77,7 @@ namespace WPFOfficeProject
             // 커맨드 연결
             NewNoteCommand = new RelayCommand(NewNote);
             DeleteNoteCommand = new RelayCommand(DeleteNote);
+            SaveCommand = new RelayCommand(SaveNote);
 
             // 기본 메모 추가
             Notes.Add(new NoteItem { Title = "첫 메모", Content = "내용을 입력하세요." });
@@ -93,6 +97,13 @@ namespace WPFOfficeProject
             // TODO: 메모 삭제 기능 구현 예정
             MessageBox.Show("삭제 버튼 클릭됨");
         }
+
+        private void SaveNote()
+        {
+            // TODO: 메모 저장 기능 구현 예정
+            MessageBox.Show("저장 버튼 클릭됨");
+        }
+
 
         // ✅ INotifyPropertyChanged 구현
         public event PropertyChangedEventHandler PropertyChanged;

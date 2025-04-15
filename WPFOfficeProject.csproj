@@ -57,7 +57,9 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Models\ChatMessage.cs" />
+    <Compile Include="Models\UserModel.cs" />
     <Compile Include="ViewModels\ChatViewModel.cs" />
+    <Compile Include="ViewModels\MainPageViewModel.cs" />
     <Compile Include="ViewModels\MainWindowViewModel.cs" />
     <Compile Include="ViewModels\NotepadViewModel.cs" />
     <Compile Include="ViewModels\RegisterViewModel.cs" />
