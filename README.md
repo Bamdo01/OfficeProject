@@ -65,25 +65,18 @@
 UI 구성과 화면 전환 로직에 집중했으며, 기능 완성보다는 구조 이해와 학습에 초점을 맞추고 있습니다.
 추후 여유가 생기면 백엔드와의 연동도 진행할 예정입니다.
 
+---
+
 ## 📷 Screenshots
 
 로그인
 
-![Main Page Screenshot](images/login.png)
+[Main Page Screenshot](images/login.png)
 
----
 
 회원가입
 
 ![Main Page Screenshot](images/signin.png)
-
----
-
-메인페이지
-
-![Main Page Screenshot](images/mainpage.png)
-
----
 
 채팅
 
