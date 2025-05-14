@@ -1,11 +1,12 @@
 # OfficeProject
 
-![Main Page Screenshot](images/mainpage.png)
 
 📌 **프로젝트 소개**  
 **OfficeProject**는 C#과 WPF를 기반으로 한 데스크톱 커뮤니케이션 앱입니다.  
 로그인, 회원가입, 친구 관리, 메모장, 채팅 등 기본적인 커뮤니케이션 기능의 **UI를 중심으로 구성**하였으며, 백엔드는 현재 미구현 상태입니다.  
 **WPF와 MVVM 패턴을 학습**하기 위한 개인 프로젝트입니다.
+
+![Main Page Screenshot](images/mainpage.png)
 
 ---
 
