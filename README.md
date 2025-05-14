@@ -71,7 +71,7 @@ UI 구성과 화면 전환 로직에 집중했으며, 기능 완성보다는 구
 ![Main Page Screenshot](images/login.png)
 
 회원가입
-![Main Page Screenshot](images/sign in.png)
+![Main Page Screenshot](images/signin.png)
 
 메인페이지
 ![Main Page Screenshot](images/mainpage.png)
