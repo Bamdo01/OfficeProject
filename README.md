@@ -68,21 +68,33 @@ UI 구성과 화면 전환 로직에 집중했으며, 기능 완성보다는 구
 ## 📷 Screenshots
 
 로그인
+
 ![Main Page Screenshot](images/login.png)
 
+---
+
 회원가입
+
 ![Main Page Screenshot](images/signin.png)
 
+---
+
 메인페이지
+
 ![Main Page Screenshot](images/mainpage.png)
 
+---
+
 채팅
+
 ![Main Page Screenshot](images/chat.png)
 
 친구추가
+
 ![Main Page Screenshot](images/friend.png)
 
 메모장
+
 ![Main Page Screenshot](images/note.png)
 
 
