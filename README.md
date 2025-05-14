@@ -75,7 +75,9 @@ UI 구성과 화면 전환 로직에 집중했으며, 기능 완성보다는 구
 
 ![Main Page Screenshot](images/signin.png)
 
-<div align="center" style="display: flex; gap: 10px;"> <div style="display: inline-block; text-align: center;"> <span><strong>로그인</strong></span><br> <img src="images/login.png" alt="Login Screenshot" width="300"> </div> <div style="display: inline-block; text-align: center; margin-left: 10px;"> <span><strong>회원가입</strong></span><br> <img src="images/signin.png" alt="Signin Screenshot" width="300"> </div> </div>
+| 로그인 | 회원가입 |
+|--------|----------|
+| ![Login Screenshot](images/login.png) | ![Signin Screenshot](images/signin.png) |
 
 메인페이지
 
