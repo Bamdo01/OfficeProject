@@ -6,8 +6,6 @@
 로그인, 회원가입, 친구 관리, 메모장, 채팅 등 기본적인 커뮤니케이션 기능의 **UI를 중심으로 구성**하였으며, 백엔드는 현재 미구현 상태입니다.  
 **WPF와 MVVM 패턴을 학습**하기 위한 개인 프로젝트입니다.
 
-![Main Page Screenshot](images/mainpage.png)
-
 ---
 
 ## ✨ 주요 기능 (UI 중심)
@@ -76,6 +74,12 @@ UI 구성과 화면 전환 로직에 집중했으며, 기능 완성보다는 구
 회원가입
 
 ![Main Page Screenshot](images/signin.png)
+
+<div align="center" style="display: flex; gap: 10px;"> <div style="display: inline-block; text-align: center;"> <span><strong>로그인</strong></span><br> <img src="images/login.png" alt="Login Screenshot" width="300"> </div> <div style="display: inline-block; text-align: center; margin-left: 10px;"> <span><strong>회원가입</strong></span><br> <img src="images/signin.png" alt="Signin Screenshot" width="300"> </div> </div>
+
+메인페이지
+
+![Main Page Screenshot](images/mainpage.png)
 
 채팅
 
