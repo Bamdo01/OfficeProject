@@ -16,7 +16,7 @@ using System.IO;
 using System.Data;
 
 
-namespace WPFOfficeProject
+namespace WPFOfficeProject.Views
 {
     /// <summary>
     /// FriendWaitPage.xaml에 대한 상호 작용 논리

@@ -1,7 +1,8 @@
 ﻿using System;
 using System.Windows;
+using WPFOfficeProject.ViewModels;
 
-namespace WPFOfficeProject
+namespace WPFOfficeProject.Views
 {
     public partial class MainWindow : Window
     {

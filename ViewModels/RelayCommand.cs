@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Windows.Input;
 
-namespace WPFOfficeProject
+namespace WPFOfficeProject.ViewModels
 {
     public class RelayCommand : ICommand
     {

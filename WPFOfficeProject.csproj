@@ -57,18 +57,20 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Models\ChatMessage.cs" />
-    <Compile Include="Models\UserModel.cs" />
+    <Compile Include="Models\User.cs" />
+    <Compile Include="Services\NavigationService.cs" />
     <Compile Include="ViewModels\ChatViewModel.cs" />
+    <Compile Include="ViewModels\LoginPageViewModel.cs" />
+    <Compile Include="ViewModels\LoginWindowViewModel.cs" />
     <Compile Include="ViewModels\MainPageViewModel.cs" />
     <Compile Include="ViewModels\MainWindowViewModel.cs" />
     <Compile Include="ViewModels\NotepadViewModel.cs" />
-    <Compile Include="ViewModels\RegisterViewModel.cs" />
+    <Compile Include="ViewModels\RegisterPageViewModel.cs" />
     <Compile Include="ViewModels\RelayCommand.cs" />
     <Compile Include="Views\ChatPage.xaml.cs">
       <DependentUpon>ChatPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Services\NUPServerConnector.cs" />
-    <Compile Include="ViewModels\LoginViewModel.cs" />
     <Compile Include="Views\FriendViews\FriendAddPage.xaml.cs">
       <DependentUpon>FriendAddPage.xaml</DependentUpon>
     </Compile>

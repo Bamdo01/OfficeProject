@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using WPFOfficeProject.Models;
 
-namespace WPFOfficeProject
+namespace WPFOfficeProject.ViewModels
 {
     public class MainPageViewModel : INotifyPropertyChanged
     {
@@ -23,7 +23,7 @@ namespace WPFOfficeProject
 
         public MainPageViewModel()
         {
-            WelcomeMessage = $"{UserModel.UserId}님 환영합니다!";
+            //WelcomeMessage = $"{User.UserId}님 환영합니다!";
         }
 
         public event PropertyChangedEventHandler PropertyChanged;
