@@ -19,7 +19,7 @@ using System.IO;
 //using System.Collections.ObjectModel;
 //using System.Collections;
 
-namespace WPFOfficeProject
+namespace WPFOfficeProject.Views
 {
     /// <summary>
     /// FriendAddPage.xaml에 대한 상호 작용 논리

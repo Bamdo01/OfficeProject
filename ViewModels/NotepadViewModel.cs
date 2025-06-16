@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Input;
 
-namespace WPFOfficeProject
+namespace WPFOfficeProject.ViewModels
 {
     public class NotepadViewModel : INotifyPropertyChanged
     {

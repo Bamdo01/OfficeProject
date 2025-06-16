@@ -4,7 +4,7 @@ using System.ComponentModel;
 using System.Windows.Input;
 using System.Windows.Threading;
 
-namespace WPFOfficeProject
+namespace WPFOfficeProject.ViewModels
 {
     public class ChatViewModel : INotifyPropertyChanged
     {

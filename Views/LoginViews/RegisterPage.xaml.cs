@@ -13,8 +13,9 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using WPFOfficeProject.ViewModels;
 
-namespace WPFOfficeProject
+namespace WPFOfficeProject.Views
 {
     /// <summary>
     /// RegisterPage.xaml에 대한 상호 작용 논리
@@ -27,7 +28,7 @@ namespace WPFOfficeProject
         {
             //this.loginPage = loginPage;
             InitializeComponent();
-            this.DataContext = new RegisterViewModel();
+            this.DataContext = new RegisterPageViewModel();
 
         }
       

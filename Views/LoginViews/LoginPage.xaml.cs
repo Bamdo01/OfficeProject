@@ -14,19 +14,20 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.IO;
+using WPFOfficeProject.ViewModels;
 
 
-namespace WPFOfficeProject
+namespace WPFOfficeProject.Views
 {
     /// <summary>
     /// LoginPage.xaml에 대한 상호 작용 논리
     /// </summary>
     public partial class LoginPage : Page
     {
-        public LoginPage(LoginViewModel viewModel)
+        public LoginPage()
         {
             InitializeComponent();
-            this.DataContext = viewModel;  // ✅ 기존 ViewModel을 유지
+            this.DataContext = new LoginPageViewModel();  // ✅ 기존 ViewModel을 유지
         }
 
         //public LoginPage()
