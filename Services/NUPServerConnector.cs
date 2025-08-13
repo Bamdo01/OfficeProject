@@ -21,22 +21,15 @@ namespace WPFOfficeProject
             public Action<string> OnReceiveNG { get; set; }
         }
 
-        // SHA256 해싱 함수 - 중복 제거 목적
-        private string ComputeSHA256Hash(string input)
-        {
-            using (SHA256 sha256 = SHA256.Create())
-            {
-                byte[] hashBytes = sha256.ComputeHash(Encoding.UTF8.GetBytes(input));
-                return BitConverter.ToString(hashBytes).Replace("-", "");
-            }
-        }
-
         /// <summary>
         /// 서버로 사용자 로그인 요청 쿼리를 보내는 함수
         /// </summary>
+        /// <param name="id">사용자 ID</param>
+        /// <param name="pw">해시화된 사용자 비밀번호</param>
         public void SendUserLogin(string id, string pw, Action<string> OnReceiveOK, Action<string> OnReceiveNG)
         {
-            string hashPW = ComputeSHA256Hash(pw);
+            byte[] computeHash = SHA256.Create().ComputeHash(Encoding.UTF8.GetBytes(pw));
+            string hashPW = BitConverter.ToString(computeHash).Replace("-", "");
 
             StringBuilder query = new StringBuilder();
             query.Append($"COMMAND:USER_LOGIN{Environment.NewLine}");
@@ -48,7 +41,8 @@ namespace WPFOfficeProject
 
         public void SendUserRegister(string id, string pw, string email, string addr, DateTime birthDay, int gender, string phone, Action<string> OnReceiveOK, Action<string> OnReceiveNG)
         {
-            string hashPW = ComputeSHA256Hash(pw);
+            byte[] computeHash = SHA256.Create().ComputeHash(Encoding.UTF8.GetBytes(pw));
+            string hashPW = BitConverter.ToString(computeHash).Replace("-", "");
 
             StringBuilder query = new StringBuilder();
             query.Append($"COMMAND:USER_REGISTER{Environment.NewLine}");
@@ -129,7 +123,8 @@ namespace WPFOfficeProject
 
         public void SendUserResetPassword(string id, string newPw, Action<string> OnReceiveOK, Action<string> OnReceiveNG)
         {
-            string hashPW = ComputeSHA256Hash(newPw);
+            byte[] computeHash = SHA256.Create().ComputeHash(Encoding.UTF8.GetBytes(newPw));
+            string hashPW = BitConverter.ToString(computeHash).Replace("-", "");
 
             StringBuilder query = new StringBuilder();
             query.Append($"COMMAND:USER_RESETPASSWORD{Environment.NewLine}");
@@ -139,17 +134,19 @@ namespace WPFOfficeProject
             this.SendMessage(query.ToString(), OnReceiveOK, OnReceiveNG);
         }
 
-        // 서버와 연결 후 메시지 전송 시작
         private void SendMessage(string msg, Action<string> OnReceiveOK, Action<string> OnReceiveNG)
         {
+            // 서버 IP 주소 설정
+            //string serverIp = "200.200.200.5";
             string serverIp = "localhost";
+            // 서버 포트 주소 설정
             int port = 1103;
+            // 전송할 메세지 정보
             TcpClient client = new TcpClient();
 
             client.BeginConnect(serverIp, port, new AsyncCallback(ConnectCallback), new StateObject { Client = client, Message = msg, OnReceiveOK = OnReceiveOK, OnReceiveNG = OnReceiveNG });
         }
 
-        // 서버 연결 완료 시 호출되는 콜백
         private static void ConnectCallback(IAsyncResult ar)
         {
             StateObject state = (StateObject)ar.AsyncState;
@@ -173,7 +170,6 @@ namespace WPFOfficeProject
             }
         }
 
-        // 메시지 전송 완료 후 호출되는 콜백
         private static void WriteCallback(IAsyncResult ar)
         {
             StateObject state = (StateObject)ar.AsyncState;
@@ -184,7 +180,7 @@ namespace WPFOfficeProject
                 NetworkStream stream = client.GetStream();
                 stream.EndWrite(ar);
 
-                // 서버로부터 응답 읽기 시작
+                // 서버로부터 응답 읽기
                 byte[] buffer = new byte[256];
                 stream.BeginRead(buffer, 0, buffer.Length, new AsyncCallback(ReadCallback), new StateObject { Client = client, OnReceiveOK = state.OnReceiveOK, OnReceiveNG = state.OnReceiveNG, RecvBuffer = buffer });
             }
@@ -198,7 +194,6 @@ namespace WPFOfficeProject
             }
         }
 
-        // 서버 응답 처리 콜백
         private static void ReadCallback(IAsyncResult ar)
         {
             StateObject state = (StateObject)ar.AsyncState;
@@ -226,6 +221,7 @@ namespace WPFOfficeProject
                     }));
                 }
 
+                // 스트림과 TcpClient 객체 닫기
                 stream.Close();
                 client.Close();
             }

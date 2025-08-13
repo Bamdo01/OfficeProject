@@ -1,6 +1,0 @@
-@OfficeProjectServer_HostAddress = http://localhost:5069
-
-GET {{OfficeProjectServer_HostAddress}}/weatherforecast/
-Accept: application/json
-
-###
